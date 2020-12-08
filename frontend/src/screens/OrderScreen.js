@@ -25,7 +25,7 @@ const OrderScreen = ({ match, history }) => {
   const orderPay = useSelector((state) => state.orderPay)
   const { loading: loadingPay, success: successPay } = orderPay
 
-  const orderDeliver = useSelector((state) => state.orderDeliver)
+  // const orderDeliver = useSelector((state) => state.orderDeliver)
   // const { loading: loadingDeliver, success: successDeliver } = orderDeliver
 
   const userLogin = useSelector((state) => state.userLogin)
@@ -70,7 +70,7 @@ const OrderScreen = ({ match, history }) => {
         setSdkReady(true)
       }
     }
-  }, [dispatch, orderId, successPay, order])
+  }, [dispatch, orderId, successPay, order, userInfo, history])
 
   const successPaymentHandler = (paymentResult) => {
     console.log(paymentResult)
