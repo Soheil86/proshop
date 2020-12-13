@@ -12,10 +12,11 @@ const SearchBox = ({ history }) => {
       history.push('/')
     }
   }
+
   return (
-    <Form onSubmit={submitHandler}>
+    <Form onSubmit={submitHandler} inline>
       <Form.Control
-        text='text'
+        type='text'
         name='q'
         onChange={(e) => setKeyword(e.target.value)}
         placeholder='Search Products...'
